@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-> Schema package for table **payment_logs** (repo: $slug).
+> Schema package for table **payment_logs** (repo: `payment-logs`).
 
 ## Files
 ```
@@ -48,10 +48,10 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 ```mermaid
 erDiagram
   PAYMENT_LOGS {
-    BIGINT id PK
-    BIGINT payment_id
-    DATETIME(6) log_at
-    TEXT message
+    INT id PK
+    INT payment_id
+    DATETIME log_at
+    VARCHAR message
   }
   PAYMENT_LOGS }o--|| PAYMENTS : "payment_id"
 ```
