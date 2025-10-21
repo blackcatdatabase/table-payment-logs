@@ -53,7 +53,7 @@ erDiagram
     DATETIME(6) log_at
     TEXT message
   }
-  PAYMENT_LOGS }o--|| PAYMENTS : (payment_id)
+  PAYMENT_LOGS }o--|| PAYMENTS : "payment_id"
 ```
 
 ## Indexes
