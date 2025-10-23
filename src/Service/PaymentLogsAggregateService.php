@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\PaymentLogs\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\PaymentLogs\Dto\PaymentLogDto;
 use BlackCat\Database\Packages\PaymentLogs\Mapper\PaymentLogDtoMapper;
 use BlackCat\Database\Packages\PaymentLogs\Repository\PaymentLogRepository;
