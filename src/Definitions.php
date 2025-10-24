@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\PaymentLogs;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'payment_logs'; }
-    public static function contractView(): string { return 'v_payment_logs_contract'; }
+    public static function contractView(): string { return 'vw_payment_logs'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'payment_id', 'log_at', 'message' ]; }
     public static function pk(): string { return 'id'; }
