@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  payment_logs
 CREATE TABLE IF NOT EXISTS payment_logs (
@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS payment_logs (
   payment_id BIGINT UNSIGNED NOT NULL,
   log_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   message TEXT NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
