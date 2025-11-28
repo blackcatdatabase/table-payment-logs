@@ -1,6 +1,7 @@
--- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
+-- Auto-generated from schema-map-mysql.psd1 (map@mtime:2025-11-27T15:13:14Z)
 -- engine: mysql
 -- table:  payment_logs
+
 CREATE TABLE IF NOT EXISTS payment_logs (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   payment_id BIGINT UNSIGNED NOT NULL,
