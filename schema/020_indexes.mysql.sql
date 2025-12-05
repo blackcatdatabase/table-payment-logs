@@ -2,4 +2,4 @@
 -- engine: mysql
 -- table:  payment_logs
 
-ALTER TABLE payment_logs ADD CONSTRAINT fk_payment_logs_payment FOREIGN KEY (payment_id) REFERENCES payments(id) ON DELETE CASCADE;
+CREATE INDEX idx_payment_logs_payment ON payment_logs (payment_id, log_at DESC);
