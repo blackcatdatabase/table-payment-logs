@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class PaymentLogDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'payment_id' => 'paymentId', 'log_at' => 'logAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'payment_id' => 'paymentId', 'log_at' => 'logAt', 'message' => 'message' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
@@ -39,13 +39,8 @@ final class PaymentLogDtoMapper
 
     private static function tz(): DateTimeZone
     {
-        if (self::$tzObj instanceof DateTimeZone) {
-            return self::$tzObj;
-        }
-        try {
+        if (!(self::$tzObj instanceof DateTimeZone)) {
             self::$tzObj = new DateTimeZone(self::TZ);
-        } catch (\Throwable) {
-            self::$tzObj = new DateTimeZone('UTC');
         }
         return self::$tzObj;
     }
