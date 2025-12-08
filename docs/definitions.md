@@ -6,7 +6,7 @@ Plaintext logs per payment.
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| log_at | TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Log time (UTC). |
+| log_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Log time (UTC). |
 | message | TEXT | NO |  | Log message. |
 | payment_id | BIGINT | NO |  | Payment (FK payments.id). |
 
@@ -41,5 +41,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_payment_logs | mysql | algorithm=MERGE, security=INVOKER | [packages\payment-logs\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/payment-logs/schema/040_views.mysql.sql) |
-| vw_payment_logs | postgres |  | [packages\payment-logs\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/payment-logs/schema/040_views.postgres.sql) |
+| vw_payment_logs | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_payment_logs | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
