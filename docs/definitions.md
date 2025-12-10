@@ -5,10 +5,10 @@ Plaintext logs per payment.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| log_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Log time (UTC). |
-| message | TEXT | NO |  | Log message. |
 | payment_id | BIGINT | NO |  | Payment (FK payments.id). |
+| log_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Log time (UTC). |
+| id | BIGINT | NO |  | Surrogate primary key. |
+| message | TEXT | NO |  | Log message. |
 
 ## Engine Details
 
