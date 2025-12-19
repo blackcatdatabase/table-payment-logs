@@ -1,0 +1,20 @@
+{
+  "tables": {
+    "payment_logs": {
+      "columns": {
+        "id": {
+          "strategy": "passthrough"
+        },
+        "log_at": {
+          "strategy": "passthrough"
+        },
+        "message": {
+          "strategy": "passthrough"
+        },
+        "payment_id": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
